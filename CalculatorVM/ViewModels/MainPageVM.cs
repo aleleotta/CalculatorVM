@@ -20,12 +20,14 @@ namespace CalculatorVM.ViewModels
         private DelegateCommand<string> selectOp;
         private DelegateCommand<string> calculateNums;
         #endregion
+
         #region Properties
         public string DisplayText { get; }
         public DelegateCommand SelectOp { get; }
         public DelegateCommand CalculateNums { get; }
         public DelegateCommand StringifyToDisplay { get; }
         #endregion
+
         #region Constructor
         public MainPageVM()
         {
@@ -33,6 +35,7 @@ namespace CalculatorVM.ViewModels
             calculateNums = new DelegateCommand<string>(calculateNums_execute);
         }
         #endregion
+
         #region Commands
         private void selectOp_execute(string symbol)
         {
@@ -45,9 +48,11 @@ namespace CalculatorVM.ViewModels
         { 
         }
         #endregion
+
         #region Events
         public event PropertyChangedEventHandler PropertyChanged;
         #endregion
+
         #region ViewModel
         public void NotifyPropertyChanged([CallerMemberName] string propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         #endregion
