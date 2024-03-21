@@ -19,7 +19,6 @@ namespace CalculatorVM.ViewModels
         private string displayText;
         private DelegateCommand<string> selectOp;
         private DelegateCommand<string> calculateNums;
-        private DelegateCommand<string> stringifyToDisplay;
         #endregion
         #region Properties
         public string DisplayText { get; }
@@ -32,17 +31,17 @@ namespace CalculatorVM.ViewModels
         {
             selectOp = new DelegateCommand<string>(selectOp_execute);
             calculateNums = new DelegateCommand<string>(calculateNums_execute);
-            stringifyToDisplay = new DelegateCommand<string>(stringifyToDisplay_execute);
         }
         #endregion
         #region Commands
         private void selectOp_execute(string symbol)
         {
+            (Button)selectOp = Button obj;
         }
         private void calculateNums_execute(string num)
         {
         }
-        private void stringifyToDisplay_execute(string num)
+        private void stringifyToDisplay()
         { 
         }
         #endregion
