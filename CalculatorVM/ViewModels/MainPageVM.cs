@@ -39,7 +39,6 @@ namespace CalculatorVM.ViewModels
         #region Commands
         private void selectOp_execute(string symbol)
         {
-            (Button)selectOp = Button obj;
         }
         private void calculateNums_execute(string num)
         {

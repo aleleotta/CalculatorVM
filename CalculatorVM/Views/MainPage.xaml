@@ -1,40 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CalculatorVM.MainPage">
+             x:Class="CalculatorVM.MainPage"
+             BackgroundColor="White">
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
+            HorizontalOptions="Center"
             VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+            <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="#C5DFFD" MinimumHeightRequest="500" MinimumWidthRequest="300" Padding="10">
+                <Grid RowSpacing="5" ColumnSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Padding="10">
+                        <Label x:Name="calc_display" Text="0" FontSize="35" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
+                    </Border>
+                    <Button Text="7" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="1" Grid.Column="0"/>
+                    <Button Text="8" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="1" Grid.Column="1"/>
+                    <Button Text="9" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="1" Grid.Column="2"/>
+                    <Button Text="/" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="1" Grid.Column="3"/>
+                    <Button Text="4" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="2" Grid.Column="0"/>
+                    <Button Text="5" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="2" Grid.Column="1"/>
+                    <Button Text="6" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="2" Grid.Column="2"/>
+                    <Button Text="*" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="2" Grid.Column="3"/>
+                    <Button Text="1" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="0"/>
+                    <Button Text="2" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="1"/>
+                    <Button Text="3" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="2"/>
+                    <Button Text="-" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="3"/>
+                    <Button Text="C" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="0"/>
+                    <Button FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="1"/>
+                    <Button Text="=" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="2"/>
+                    <Button  Text="+" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="3"/>
+                </Grid>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 
