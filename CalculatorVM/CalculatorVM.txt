@@ -1,0 +1,29 @@
+Crear el modelo y ViewModel de una calculadora de dos numeros.
+
+MainPageVM : INotifyPropertyChanged, ICommand
+	Attributes:
+		private float num1
+		private float num2
+		private string selectedOp
+		private float res
+		private string displayText
+		private DelegateCommand selectOp
+		private DelegateCommand calculateNums
+		private DelegateCommand stringifyToDisplay
+	Properties:
+		public string DisplayText: get
+		public DelegateCommand SelectOp: get
+		public DelegateCommand CalculateNums: get
+		public DelegateCommand StringifyToDisplay : get
+	Constructors:
+		public MainPageVM()
+	Methods:
+		Commands:
+			private void selectOp()
+			private void calculateNums()
+			private void stringifyToDisplay()
+	Events:
+		event PropertyChanged
+		event canExecute
+	ViewModel:
+		public void PropertyChanged([CallerMemberName] string propertyName = "")
