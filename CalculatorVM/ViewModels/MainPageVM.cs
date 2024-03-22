@@ -13,8 +13,8 @@ namespace CalculatorVM.ViewModels
     internal class MainPageVM : INotifyPropertyChanged
     {
         #region Attributes
-        private float num1;
-        private float num2;
+        private float num1 = 0;
+        private float num2 = 0;
         private string selectedOp;
         private float res;
         private string displayText;
@@ -69,7 +69,14 @@ namespace CalculatorVM.ViewModels
         }
         private bool calculateNums_canExecute(string num)
         {
-            return true;
+            if (num1 == 0 || num2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         private void stringifyToDisplay()
         { 
