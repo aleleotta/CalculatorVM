@@ -6,10 +6,11 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace CalculatorVM.ViewModels
 {
-    internal class MainPageVM : INotifyPropertyChanged
+    internal class MainPageVM : INotifyPropertyChanged, ICommand
     {
         #region Attributes
         private float num1;
@@ -31,8 +32,8 @@ namespace CalculatorVM.ViewModels
         #region Constructor
         public MainPageVM()
         {
-            selectOp = new DelegateCommand<string>(selectOp_execute);
-            calculateNums = new DelegateCommand<string>(calculateNums_execute);
+            selectOp = new DelegateCommand<string>(selectOp_execute, selectOp_canExecute);
+            calculateNums = new DelegateCommand<string>(calculateNums_execute, calculateNums_canExecute);
         }
         #endregion
 
@@ -40,8 +41,16 @@ namespace CalculatorVM.ViewModels
         private void selectOp_execute(string symbol)
         {
         }
+        private bool selectOp_canExecute(string symbol)
+        {
+            return true;
+        }
         private void calculateNums_execute(string num)
         {
+        }
+        private bool calculateNums_canExecute(string num)
+        {
+            return true;
         }
         private void stringifyToDisplay()
         { 
@@ -50,6 +59,7 @@ namespace CalculatorVM.ViewModels
 
         #region Events
         public event PropertyChangedEventHandler PropertyChanged;
+        public event EventHandler CanExecuteChanged;
         #endregion
 
         #region ViewModel
