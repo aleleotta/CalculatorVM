@@ -40,8 +40,23 @@ namespace CalculatorVM.ViewModels
         #region Commands
         private void selectOp_execute(string symbol)
         {
-            Button button = new Button();
-            string parameter = (string)button.CommandParameter;
+            switch (symbol)
+            {
+                case "+":
+                    break;
+                case "-":
+                    break;
+                case "*":
+                    break;
+                case "/":
+                    break;
+                case ".":
+                    break;
+                case "C":
+                    break;
+                case "=":
+                    break;
+            }
         }
         private bool selectOp_canExecute(string symbol)
         {

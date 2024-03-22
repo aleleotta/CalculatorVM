@@ -41,9 +41,9 @@
                     <Button Text="3" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="2"/>
                     <Button Text="-" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="3" Grid.Column="3"/>
                     <Button Text="C" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="0"/>
-                    <Button FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="1"/>
+                    <Button Text="." FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="1"/>
                     <Button Text="=" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="2"/>
-                    <Button  Text="+" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="3"/>
+                    <Button Text="+" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Grid.Row="4" Grid.Column="3"/>
                 </Grid>
             </Border>
         </VerticalStackLayout>
