@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace CalculatorVM.ViewModels
 {
-    internal class MainPageVM : INotifyPropertyChanged, ICommand
+    internal class MainPageVM : INotifyPropertyChanged
     {
         #region Attributes
         private float num1;
@@ -40,6 +40,8 @@ namespace CalculatorVM.ViewModels
         #region Commands
         private void selectOp_execute(string symbol)
         {
+            Button button = new Button();
+            string parameter = (string)button.CommandParameter;
         }
         private bool selectOp_canExecute(string symbol)
         {
@@ -47,6 +49,8 @@ namespace CalculatorVM.ViewModels
         }
         private void calculateNums_execute(string num)
         {
+            Button button = new Button();
+            string parameter = (string)button.CommandParameter;
         }
         private bool calculateNums_canExecute(string num)
         {
@@ -63,7 +67,7 @@ namespace CalculatorVM.ViewModels
         #endregion
 
         #region ViewModel
-        public void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         #endregion
     }
