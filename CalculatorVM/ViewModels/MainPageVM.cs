@@ -62,7 +62,7 @@ namespace CalculatorVM.ViewModels
         }
         private bool selectOp_CanExecute(string symbol)
         {
-            if (num1 != 0) return true;
+            if (string.IsNullOrEmpty(selectedOp)) return true;
             else return false;
         }
         private void calculateNums_Execute(string pressedNum)
