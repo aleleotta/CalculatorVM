@@ -33,22 +33,22 @@
                     <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Padding="10">
                         <Label x:Name="calc_display" Text="0" FontSize="35" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Border>
-                    <Button Text="7" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="7" Grid.Row="1" Grid.Column="0"/>
-                    <Button Text="8" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="8" Grid.Row="1" Grid.Column="1"/>
-                    <Button Text="9" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="9" Grid.Row="1" Grid.Column="2"/>
-                    <Button Text="/" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="/" Grid.Row="1" Grid.Column="3"/>
-                    <Button Text="4" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="4" Grid.Row="2" Grid.Column="0"/>
-                    <Button Text="5" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="5" Grid.Row="2" Grid.Column="1"/>
-                    <Button Text="6" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="6" Grid.Row="2" Grid.Column="2"/>
-                    <Button Text="*" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="*" Grid.Row="2" Grid.Column="3"/>
-                    <Button Text="1" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="1" Grid.Row="3" Grid.Column="0"/>
-                    <Button Text="2" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="2" Grid.Row="3" Grid.Column="1"/>
-                    <Button Text="3" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="3" Grid.Row="3" Grid.Column="2"/>
-                    <Button Text="-" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="-" Grid.Row="3" Grid.Column="3"/>
-                    <Button Text="C" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="C" Grid.Row="4" Grid.Column="0"/>
-                    <Button Text="." FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="." Grid.Row="4" Grid.Column="1"/>
-                    <Button Text="=" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateRes}" Grid.Row="4" Grid.Column="2"/>
-                    <Button Text="+" FontSize="25" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="+" Grid.Row="4" Grid.Column="3"/>
+                    <Button Text="7" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="7" Grid.Row="1" Grid.Column="0"/>
+                    <Button Text="8" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="8" Grid.Row="1" Grid.Column="1"/>
+                    <Button Text="9" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="9" Grid.Row="1" Grid.Column="2"/>
+                    <Button Text="/" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="/" Grid.Row="1" Grid.Column="3"/>
+                    <Button Text="4" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="4" Grid.Row="2" Grid.Column="0"/>
+                    <Button Text="5" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="5" Grid.Row="2" Grid.Column="1"/>
+                    <Button Text="6" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="6" Grid.Row="2" Grid.Column="2"/>
+                    <Button Text="*" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="*" Grid.Row="2" Grid.Column="3"/>
+                    <Button Text="1" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="1" Grid.Row="3" Grid.Column="0"/>
+                    <Button Text="2" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="2" Grid.Row="3" Grid.Column="1"/>
+                    <Button Text="3" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="3" Grid.Row="3" Grid.Column="2"/>
+                    <Button Text="-" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="-" Grid.Row="3" Grid.Column="3"/>
+                    <Button Text="C" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="C" Grid.Row="4" Grid.Column="0"/>
+                    <Button Text="." FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="." Grid.Row="4" Grid.Column="1"/>
+                    <Button Text="=" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateRes}" Grid.Row="4" Grid.Column="2"/>
+                    <Button Text="+" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding SelectOp}" CommandParameter="+" Grid.Row="4" Grid.Column="3"/>
                 </Grid>
             </Border>
         </VerticalStackLayout>
