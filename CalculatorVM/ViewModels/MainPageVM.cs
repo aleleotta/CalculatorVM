@@ -18,10 +18,10 @@ namespace CalculatorVM.ViewModels
         #endregion
 
         #region Properties
-        public string DisplayText { get; }
-        public DelegateCommand SelectOp { get; }
-        public DelegateCommand CalculateNums { get; }
-        public DelegateCommand CalculateRes { get; }
+        public string DisplayText { get { return displayText; } }
+        public DelegateCommand<string> SelectOp { get { return selectOp; } }
+        public DelegateCommand<string> CalculateNums { get { return calculateNums; } }
+        public DelegateCommand CalculateRes { get { return calculateRes; } }
         #endregion
 
         #region Constructor
