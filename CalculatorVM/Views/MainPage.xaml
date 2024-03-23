@@ -31,7 +31,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Padding="10">
-                        <Label x:Name="calc_display" Text="0" FontSize="35" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
+                        <Label x:Name="calc_display" Text="{Binding DisplayText}" FontSize="35" TextColor="Black" HorizontalOptions="End" VerticalOptions="Center"/>
                     </Border>
                     <Button Text="7" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="7" Grid.Row="1" Grid.Column="0"/>
                     <Button Text="8" FontSize="25" TextColor="Black" BackgroundColor="#3894FD" MaximumHeightRequest="65" Padding="10" Command="{Binding CalculateNums}" CommandParameter="8" Grid.Row="1" Grid.Column="1"/>

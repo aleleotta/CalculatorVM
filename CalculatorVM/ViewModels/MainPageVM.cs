@@ -1,4 +1,4 @@
-﻿using _18_CRUD_Personas_UWP_UI.ViewModels.Utilidades;
+﻿using CalculatorVM.Utilities;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -9,7 +9,7 @@ namespace CalculatorVM.ViewModels
         #region Attributes
         private float num1 = 0;
         private float num2 = 0;
-        private string selectedOp = null;
+        private string selectedOp = "";
         private float res = 0;
         private string displayText = "0";
         private DelegateCommand<string> selectOp;
@@ -36,7 +36,6 @@ namespace CalculatorVM.ViewModels
         #region Commands
         private void selectOp_Execute(string symbol)
         {
-            selectedOp = symbol;
             switch (symbol)
             {
                 case "+":
@@ -52,7 +51,7 @@ namespace CalculatorVM.ViewModels
                     selectedOp = "/";
                     break;
                 case "C":
-                    selectedOp = null;
+                    selectedOp = "";
                     num1 = 0;
                     num2 = 0;
                     res = 0;
@@ -63,23 +62,23 @@ namespace CalculatorVM.ViewModels
         }
         private bool selectOp_CanExecute(string symbol)
         {
-            if (selectedOp != null) return false;
-            else return true;
+            if (num1 != 0) return true;
+            else return false;
         }
         private void calculateNums_Execute(string pressedNum)
         {
-            if (selectedOp == null)
+            if (selectedOp == "")
             {
                 if (num1 == 0)
                 {
                     string concat = pressedNum;
-                    stringifyToDisplay(concat);
+                    stringifyToDisplay(pressedNum);
                     float.TryParse(concat, out num1);
                 }
                 else
                 {
                     string concat = num1.ToString() + pressedNum;
-                    stringifyToDisplay(concat);
+                    stringifyToDisplay(pressedNum);
                     float.TryParse(concat, out num1);
                 }
             }
@@ -88,13 +87,13 @@ namespace CalculatorVM.ViewModels
                 if (num2 == 0)
                 {
                     string concat = pressedNum;
-                    stringifyToDisplay(concat);
+                    stringifyToDisplay(pressedNum);
                     float.TryParse(concat, out num2);
                 }
                 else
                 {
                     string concat = num2.ToString() + pressedNum;
-                    stringifyToDisplay(concat);
+                    stringifyToDisplay(pressedNum);
                     float.TryParse(concat, out num2);
                 }
             }
@@ -135,7 +134,7 @@ namespace CalculatorVM.ViewModels
         {
             if (displayText == "0")
             {
-                if (parameter == "+" || parameter == "-" || parameter == "*" || parameter == "/" || parameter == "C") displayText = "0";
+                if (parameter == "+" || parameter == "-" || parameter == "*"|| parameter == "/" || parameter == "C") displayText = "0";
                 else displayText = parameter;
             }
             else
