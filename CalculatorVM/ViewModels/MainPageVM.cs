@@ -58,12 +58,12 @@ namespace CalculatorVM.ViewModels
                     displayText = "0";
                     break;
             }
+            selectOp.RaiseCanExecuteChanged();
             stringifyToDisplay(symbol);
         }
         private bool selectOp_CanExecute(string symbol)
         {
-            if (string.IsNullOrEmpty(selectedOp)) return true;
-            else return false;
+            return true;
         }
         private void calculateNums_Execute(string pressedNum)
         {
@@ -124,8 +124,9 @@ namespace CalculatorVM.ViewModels
         }
         private bool calculateRes_CanExecute()
         {
-            if (num1 == 0 || num2 == 0) return false;
-            else return true;
+            return true;
+            /*if (num1 == 0 || num2 == 0) return false;
+            else return true;*/
         }
         #endregion
 
